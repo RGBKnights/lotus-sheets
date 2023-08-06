@@ -1,15 +1,16 @@
+<script setup>
+import { onMounted } from 'vue';
+import { useExampleStore } from '@/stores/example';
+onMounted(async () => {
+  const { example } = useExampleStore();
+  await example();
+})
+</script>
+
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div>
   </div>
 </template>
 
 <style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
 </style>
